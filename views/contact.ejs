@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<section class="contact">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Get in touch with us!</p>
+        <form>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                <label for="name" class="form__label">Name</label>
+              </div>
+              <div class="form__group field">
+                <input type="email" class="form__field" placeholder="Email" name="name" id='name' required />
+                <label for="name" class="form__label">Email</label>
+              </div>
+              <div class="form__group field">
+                <textarea name="message" id="message" cols="30" rows="2" class="form__field" placeholder="Message"></textarea>
+                <label for="name" class="form__label">Message</label>
+              </div>
+            <button type="submit" class="contact-btn">Submit</button>
+        </form>
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>

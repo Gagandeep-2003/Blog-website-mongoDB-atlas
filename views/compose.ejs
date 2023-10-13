@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="heading">Compose</h1>
+
+<form action="/compose" method="post">
+    <div class="container flex-column">
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title" required><br>
+    <label for="post">Post</label><br>
+    <textarea name="post" id="post" cols="30" rows="10" required></textarea><br>
+    <label for="author">Author</label><br>
+    <input type="text" name="author" id="author" required><br>
+    </div>
+    <input type="submit" value="Publish" name="publish-btn" class="publish-btn">    
+</form>
+
+<%- include("partials/footer.ejs") %>

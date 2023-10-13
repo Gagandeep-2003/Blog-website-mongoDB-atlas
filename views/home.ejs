@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<a href="/compose">
+    <button type="submit" class="btn btn-primary">POST</button>
+</a>
+
+<h1>BLOGS</h1>
+<p>
+    ✨ What Awaits You? ✨<br>
+  🧭 Thoughtful Reflections: Dive into profound musings on life, philosophy, and the human experience.<br>
+  📚 Book Nook: Explore literary realms and discover your next favorite read.<br>
+  💡 Practical Wisdom: Tips and advice to enhance your daily life.<br>
+  🌌 Mindful Journeys: Guided meditations and mindfulness exercises.<br>
+  🌐 Global Exploration: Travel tales and cultural explorations.<br>
+  💬 Community Conversations: Engage with a like-minded community of seekers.<br>
+</p>
+
+<% posts.forEach(post => { %>
+    <h2 class="heading" name="post-title"> <%= post.title %></h2>
+    <p class="truncated-text"><%= post.post.slice(0, 100) + "..." %><a href="/posts/<%= post._id %>">Read more</a></p>
+    
+<%}); %>
+<%- include("partials/footer.ejs") %>
